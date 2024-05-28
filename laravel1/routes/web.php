@@ -19,3 +19,11 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/register', [HomeController::class, 'register']);
 
 Route::post('/send', [HomeController::class, 'send']);
+
+Route::get('/table', function () {
+    return view('pages.table');
+}); 
+
+Route::get('/data-table', function () {
+    return view('pages.data-table');
+}); 
