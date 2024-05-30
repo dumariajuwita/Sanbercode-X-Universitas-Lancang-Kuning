@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\homecontroller;
 
 /*
@@ -16,14 +17,14 @@ use App\Http\Controllers\homecontroller;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/register', [HomeController::class, 'register']);
+Route::get('/register', [authController::class, 'register']);
 
-Route::post('/send', [HomeController::class, 'send']);
+Route::post('/send', [authController::class, 'send']);
 
 Route::get('/table', function () {
     return view('pages.table');
 }); 
 
 Route::get('/data-table', function () {
-    return view('pages.data-table');
+    return view('pages.data-table'); 
 }); 
